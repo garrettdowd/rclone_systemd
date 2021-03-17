@@ -53,8 +53,8 @@ ExecStartPre=/usr/bin/test -r "${RCLONE_CONF}"
 ExecStart=/usr/bin/rclone mount \
             --config="${RCLONE_CONF}" \
 #See additional items for access control below for information about the following 2 flags
-            --allow-other \
-            --default-permissions \
+#            --allow-other \
+#            --default-permissions \
             --cache-tmp-upload-path="${RCLONE_TEMP_DIR}/upload" \
             --cache-chunk-path="${RCLONE_TEMP_DIR}/chunks" \
             --cache-workers=8 \
